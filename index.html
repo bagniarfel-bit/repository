@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+import time
+import sys
+
+def typewriter_effect(text, delay=0.05):
+    """Prints text one character at a time with a delay."""
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()  # Force immediate display
+        time.sleep(delay)
+    print()  
+    # Move to the next line after the lyric
+
+# List of lyrics with their display delay (adjust as needed)
+lyrics = [
+    ("I miss you bani.", 0.1),
+    ("Where do I go from here?", 0.1),
+    ("I have built a house to return to.", 0.1),
+    ("I only want to be mine and not a lesson learned.", 0.1),
+    ("And until the city burns, I will wait.", 0.1),
+    ("Live on what we were.", 0.1),
+]
+
+# Display each lyric
+for line, delay in lyrics:
+    typewriter_effect(line, delay)
+    time.sleep(0.5)  # Pause between lyrics
+
+<script src="script.js"></script>
+</body>
+</html>
